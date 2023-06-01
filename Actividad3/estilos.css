@@ -1,0 +1,89 @@
+#styles.css>.caja
+body{
+    background-color:antiquewhite;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.grip-layauot {
+    height: 650px;
+    display: grid;
+    grid-template-columns: auto 70% auto;
+    grid-template-rows:8% 10% 80% 10%;
+    background-color: rgb(44, 47, 48);
+    border: 1px solid solid black;
+
+}
+.caja{
+    border: 1px solid black;
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+  
+       
+}
+.c1{
+    grid-column: 1 / 4;
+    background-color: #49c5b6;
+    line-height: 5%;
+    
+}
+.c2{
+    grid-column: 1 / 4;
+    background-color:  #ffffff;
+    line-height: 5%;
+}
+.c3{
+    grid-column: 1 / 3;
+    background-color:  #007849;
+    
+}
+.c4{
+    grid-column: 3 /  4;
+    background-color: #ECD06F;
+}
+.c5{
+    grid-column: 1 / 4;
+    background-color: #49c5b6;
+    line-height: 5%;
+}
+.navegacion{
+    width: 650px;
+    margin: 30px auto;
+    
+}
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+.menu li> a{
+    display: block;
+    padding: 15px 20px;
+    color:#F1F8E0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #DBA901;
+    transition: all .3s;
+}
+.submenu {
+    position: absolute;
+    background-color:#01A9DB;
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color:#5a1c1c;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
