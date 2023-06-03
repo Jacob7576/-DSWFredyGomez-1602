@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>ACTIVIDAD NUMERO 3</title>
+  
+</head>
+<body>
+    <center><a href="Index.html"><img src="img/start-menu.jpg" width="50px" height="50px"></a></center> 
+    <h1>GRID LAYAOUT</h1><br><br>
+        <h3> ¿Qué es Grid Layaout?</h3><br>
+    <font size="3"><p>
+        CSS Grid layout contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web.<br> 
+                    El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página<br> 
+                    en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.<br>
+                    Al igual que las tablas, el grid layout permite a un autor alinear elementos en columnas y filas. <br>
+                    Sin embargo, con CSS grid son posibles muchos más diseños y de forma más sencilla que con las tablas. <br>
+                    Por ejemplo, los elementos secundarios de un contenedor de cuadrícula podrían posicionarse para que se solapen y se superpongan, de forma similar a los elementos posicionados<br>
+                    Grid CSS nace de esa necesidad, obteniendo las ventajas de ese sistema grid, añadiéndole numerosas mejoras y características que permiten crear rápidamente cuadrículas flexibles y potentes<br>
+                    de forma prácticamente instantánea con una nueva familia de propiedades CSS.<br>
+                    <h3>Conceptos</h3><br>
+                    Para crear diseños basados en Grid CSS necesitaremos tener en cuenta una serie de conceptos que utilizaremos a partir de ahora y que definiremos a continuación:<br><br>
+                    <center><img src="img/conceptos.JPG" width="500px" height="300px" alt="conceptos basicos"></center><br>
+                    + Contenedor: El elemento padre contenedor que definirá la cuadrícula o rejilla.<br>
+                    + Ítem: Cada uno de los hijos que contiene la cuadrícula (elemento contenedor).<br>
+                    + Celda (grid cell): Cada uno de los cuadritos (unidad mínima) de la cuadrícula.<br>
+                    + Area (grid area): Región o conjunto de celdas de la cuadrícula.<br>
+                    + Banda (grid track): Banda horizontal o vertical de celdas de la cuadrícula.<br>
+                    + Línea (grid line): Separador horizontal o vertical de las celdas de la cuadrícula.<br>
+                    <h3>Modalidades de grid</h3><br>
+                    Para utilizar cuadriculas Grid CSS, trabajaremos bajo el siguiente escenario:<br><br>
+                    <center><img src="img/grid_css.JPG" width="900px" height="200px" alt="conceptos basicos"></center><br>
+                    Para activar la cuadrícula grid hay que utilizar sobre el elemento contenedor la propiedad display y especificar uno de los dos valores que queramos utilizar: grid o inline-grid.<br><br>
+                    <center><img src="img/grid_css1.JPG" width="900px" height="200px" alt="conceptos basicos"></center><br>
+                    Este valor influye en como se comportará la cuadrícula con el contenido exterior. El primero de ellos permite que la cuadrícula aparezca encima/debajo del contenido<br>
+                    exterior (en bloque) y el segundo de ellos permite que la cuadrícula aparezca a la izquierda/derecha (en línea) del contenido exterior (ojo, la cuadrícula entera, no cada uno de sus ítems):<br><br>
+                    <center><img src="img/grid_css2.JPG" width="900px" height="200px" alt="conceptos basicos"></center><br>
+                    Una vez elegido uno de estos dos valores, y establecida la propiedad display al elemento contenedor, hay varias formas de configurar nuestra cuadrícula grid.<br>
+                    Al igual que con Flex, muchas de las propiedades se aplican al contenedor padre, sin embargo, existen algunas que se aplican sobre los elementos hijos. Las iremos viendo todas detalladamente.<br><br>
+                    <h3>Definir filas y columnas</h3>
+                    <h4>Filas y columnas fijas</h4>
+                    En Grid CSS, la forma principal de definir una cuadrícula es indicar el tamaño de sus filas y sus columnas de forma explícita. Para ello, sólo tenemos que usar las propiedades<br>
+                    CSS grid-template-columns y grid-template-rows:<br><br>
+                    <center><img src="img/grid_css3.JPG" width="900px" height="200px" alt="conceptos basicos"></center><br>
+                    Con la propiedad display: grid definimos que queremos crear un grid, y mediante las propiedades grid-template-columns y grid-template-rows definimos los tamaños de las columnas y las filas del mismo.<br>
+                    Esto significa que, a priori, tendríamos una cuadricula o grid de 4 celdas en total:<br><br>
+                    <center><img src="img/grid_css4.JPG" width="500px" height="300px" alt="conceptos basicos"></center><br>
+                    Un ejemplo donde se pueden cambiar los valores establecidos en la propiedad grid-template-columns y en la propiedad grid-template-rows, para así poder entenderlo mejor:<br><br>
+                    <center><img src="img/grid_css5.JPG" width="900px" height="300px" alt="conceptos basicos"></center><br>
+                    Tener presente el número de elementos hijos en el grid es el que debería. Dependiendo del número de elementos hijos que tenga definido el contenedor grid en su HTML, tendremos una cuadrícula de 2x2 elementos (4 ítems),<br>
+                    2x3 elementos (6 ítems), 2x4 elementos (8 ítems) y así sucesivamente. Incluso, si el número de ítems es impar (por ejemplo, 5 ítems), la última celda de la cuadrícula se quedaría vacía.<br>
+                    A medida que fueramos incluyendo más ítems en el grid, podríamos aumentar también el número de parámetros de la propiedad grid-template-columns y/o la propiedad grid-template-rows.<br>
+                    En caso de tener más ítems de lo que se indica en la propiedad, los ítems restantes se incluirían sin formato. De tener menos, simplemente se ocuparían los ítems implicados.<br><br>
+                    <h3>Unidad fracción restante (fr)</h3>
+                    En el ejemplo anterior he utilizado píxels como unidades de las celdas de la cuadrícula, sin embargo, también podemos utilizar otras unidades (o incluso combinarlas): porcentajes, la palabra clave auto (que obtiene el tamaño restante)<br>
+                    o la unidad especial de grid fr (fracción restante), que explicaremos a continuación. Supongamos el siguiente fragmento de código, donde utilizamos las unidades fr:
+                    <center><img src="img/grid_css6.JPG" width="900px" height="300px" alt="conceptos basicos"></center><br>
+                    Este nuevo ejemplo, también crea una cuadrícula de 2x2, donde el tamaño de la cuadrícula se divide en:
+                    Dos columnas: Mismo tamaño de ancho para cada una.
+                    Dos filas: La primera fila ocupará el doble (2fr) que la segunda fila (1fr).
+                    <center><img src="img/grid_css7.JPG" width="500px" height="300px" alt="conceptos basicos"></center><br>
+                    <h3>Huecos en grid</h3>
+                    Por defecto, la cuadrícula tiene todas sus celdas pegadas a sus celdas contiguas. Aunque sería posible darle un margin a las celdas dentro del contenedor, existe una forma más apropiada: los huecos (gutters).
+                    Para especificar los huecos (espacio entre celdas) podemos utilizar las propiedades column-gap y/o row-gap. En ellas indicaremos el tamaño de dichos huecos:
+                    <center><img src="img/grid_css8.JPG" width="800px" height="200px" alt="conceptos basicos"></center><br>
+                    Observa el siguiente grid irregular de ejemplo. No te preocupes por la estructura, más adelante veremos como hacerla. En él, le indicamos estas dos propiedades para colocar huecos entre las celdas de la cuadrícula.
+                    El código sería el siguiente:
+                    <center><img src="img/grid_css9.JPG" width="900px" height="200px" alt="conceptos basicos"></center><br>
+                    Con la primera propiedad column-gap, establecemos un hueco de 100px entre celda y celda que se encuentre en columna, mientras que con la propiedad row-gap establecemos un hueco de 10px entre celda y celda que se encuentre en fila. 
+                    Nos quedaría algo similar a esto:
+                    <center><img src="img/grid_css10.JPG" width="500px" height="300px" alt="conceptos basicos"></center><br>
+
+    </font><br>
+                   
+
+</body>
