@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Cuestinario Paso 4</title>
+</head>
+<body>
+    <header>
+<h1>Responda las siguientes Preguntas</h1><br><br>
+<!-- <h1 id="resultado">Responda las siguientes Preguntas</h1><br><br>-->
+</header>
+    <div class="container">
+        <section id="p1">
+    <form name="formulario">
+        <h3>1.¿Que es un selector CSS?:</h3>
+        <label>        
+        <input type="radio" name="r1" value="a"> a.Es un patrón de elementos y otros términos que indican al navegador qué elementos HTML se seleccionan para aplicarles una regla<br>
+        </label>
+        <label>
+        <input type="radio" name="r1" value="b"> b.Es el código que se utiliza para estructurar y desplegar una página web y sus contenidos<br>
+        </label>
+        <label>
+        <input type="radio" name="r1" value="c"> c.Es una plataforma informática de lenguaje de programación<br><br>
+        </label> 
+    </section>   
+    <section id="p2">
+        <h3>2.¿Cuál es la forma más eficiente de aplicar estilos CSS en un documento HTML?:</h3>
+        <label>
+        <input type="radio" name="r2" value="a"> a.En linea<br>
+        </label>
+        <label>
+        <input type="radio" name="r2" value="b"> b.Incrustado en la cabecera<br>
+        </label>
+        <label>
+        <input type="radio" name="r2" value="c"> c.Hojas de estilo Externas<br>
+        </label>
+    </section>   
+    <section id="p3">     
+        <h3>3.¿Cuáles de las siguientes declaraciones son propiedades o atributos?</h3>
+        <label>
+        <input type="radio" name="r3" value="a"> a.h1<br>
+        </label>
+        <label>
+        <input type="radio" name="r3" value="b"> b.Background-color<br>
+        </label>
+        <label>
+        <input type="radio" name="r3" value="c"> c.Italic<br>
+        </label>  
+    </section>
+    <section id="p4">
+        <h3>4.¿Cuáles de las siguientes declaraciones son selectores?</h3>
+        <label>
+        <input type="radio" name="r4" value="a"> a.p<br>
+        </label>
+        <label>
+        <input type="radio" name="r4" value="b"> b.font-family<br>
+        </label>
+        <label>
+        <input type="radio" name="r4" value="c"> c.Red<br>
+        </label>  
+    </section>
+    <section id="p5">
+        <h3>5.¿Qué significa CSS?</h3>
+        <label>
+        <input type="radio" name="r5" value="a"> a.Cascading Style Sheets<br>
+        </label>
+        <label>
+        <input type="radio" name="r5" value="b"> b.Center Style Steels<br>
+        </label>
+        <label>
+        <input type="radio" name="r5" value="c"> c.Calibre style Sheets br><br>
+        </label>  
+    </section>   
+    <section id="p6">   
+        <h3>6.¿Cómo se cambia el valor del margen derecho de un elemento?</h3>
+        <label>
+        <input type="radio" name="r6" value="a"> a.text-rigth<br>
+        </label>
+        <label>
+        <input type="radio" name="r6" value="b"> b.rigth-margin<br>
+        </label>
+        <label>
+        <input type="radio" name="r6" value="c"> c.margin-rigth><br>
+        </label>  
+    </section> 
+        <h2 id="resultado">Resultado: <span id="resultado"></span></h2><br>
+        <button input type="button" value="Enviar" onclick="procesarRespuestas()">Enviar</button>
+        </div>
+    </form>
+</div>
+    <script src="Js/script.js"></script>
+  </body>
+</html>
