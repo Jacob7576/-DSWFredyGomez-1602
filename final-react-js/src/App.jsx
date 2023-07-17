@@ -38,14 +38,14 @@ function App() {
   if (isFinished)
     return (
       <main className="app">
-        <div className="juego-terminado">
+        <div className="quiz-terminado">
           <span>
             {" "}
             Obtuviste {puntuación} de {preguntas.length}{" "}
           </span>
           <button onClick={() => (window.location.href = "/")}>
             {" "}
-            Volver a jugar
+            Resolver Quiz
           </button>
           <button
             onClick={() => {
@@ -87,7 +87,7 @@ function App() {
             }}
           >
             {preguntaActual === preguntas.length - 1
-              ? "Volver a jugar"
+              ? "Resolver Quiz"
               : "Siguiente"}
           </button>
         </div>
